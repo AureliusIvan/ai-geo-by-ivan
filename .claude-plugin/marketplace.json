@@ -1,0 +1,19 @@
+{
+  "name": "ai-geo-by-ivan",
+  "owner": {
+    "name": "Aurelius Ivan Wijaya",
+    "email": "ivan@aurelivan.com",
+    "url": "https://aitraining.id"
+  },
+  "metadata": {
+    "description": "GEO / AI-search optimization toolkit — a GEO-extended fork of marketing-skills.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ai-geo-by-ivan",
+      "source": "./",
+      "description": "47 skills: all 45 marketing-skills (CRO, copywriting, SEO, AI SEO, paid ads, ad creative, growth) plus Ivan's geo-audit and index-on-search-engine."
+    }
+  ]
+}
