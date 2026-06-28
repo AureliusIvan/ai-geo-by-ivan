@@ -13,10 +13,19 @@ This is a fork of [Corey Haines's `marketingskills`](https://github.com/coreyhai
 
 The other 45 skills (`ai-seo`, `seo-audit`, `schema`, `programmatic-seo`, `site-architecture`, `copywriting`, `cro`, `ads`, …) come from upstream unchanged.
 
-## Install (local marketplace)
+## Install
+
+From GitHub (anywhere):
 
 ```bash
-claude plugin marketplace add /home/ivan/Works/training/websites/ai-geo-by-ivan
+claude plugin marketplace add AureliusIvan/ai-geo-by-ivan
+claude plugin install ai-geo-by-ivan@ai-geo-by-ivan
+```
+
+Or from a local checkout:
+
+```bash
+claude plugin marketplace add /path/to/ai-geo-by-ivan
 claude plugin install ai-geo-by-ivan@ai-geo-by-ivan
 ```
 
