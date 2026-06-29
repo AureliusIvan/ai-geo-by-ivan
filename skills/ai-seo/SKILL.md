@@ -317,6 +317,19 @@ If you don't have one yet, add an `llms.txt` that gives AI systems a quick overv
 
 Google [introduced OKF](https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing) in June 2026 — a markdown spec for representing site content as a directory of cross-linked files with YAML frontmatter, agent-readable without scraping. Built primarily for data-team catalog metadata; the site-readable-by-agents repurposing was popularized by Suganthan Mohanadasan. No confirmed AI-search ranking signal today — treat it as protocol-layer registration like early schema.org. **For the full breakdown, implementation paths (free generator, WordPress plugin, by-hand), hosting guidance, and when to skip, see [references/okf.md](references/okf.md).**
 
+### Faster Indexing with IndexNow
+
+[IndexNow](https://www.bing.com/indexnow/getstarted) is a ping protocol: instead of waiting for engines to re-crawl, you POST your changed URLs to one endpoint and it fans out to all participating engines. You host a key file at the site root, then submit URLs whenever they're created, updated, or deleted.
+
+**Who participates:** Bing (→ Copilot), Yandex, Seznam, Naver.
+**Who does NOT:** Google. They ran an experiment and never adopted it — so Google Search, AI Overviews, and Gemini get **zero** benefit. The payoff is faster Bing/Copilot indexing, which is one of the non-Google AI engines this skill targets.
+
+**Honest worth-it test:** it's a cheap, do-it-once setup, not a big lever. IndexNow shines for large, frequently-changing sites (news, ecommerce, thousands of pages). For a small mostly-static marketing site you update a few times a month, the marginal speed-up is modest — but the cost is near-zero, so it's still worth wiring on any live site chasing Copilot citations. Skip it on sites with no domain or no live pages yet. Content structure, schema, and llms.txt remain the bigger wins.
+
+**One key works across all your domains** — each domain just hosts its own copy of the key file. The key file goes live (and the first submission validates) only on the next production deploy.
+
+**For the full reusable Next.js / Vercel implementation — key file, a `postbuild` ping script that submits the URLs from `sitemap.ts`, the production-only guard, package.json wiring, and the deploy-to-activate checklist — see [references/indexnow.md](references/indexnow.md).**
+
 ### Schema Markup for AI
 
 Structured data helps AI systems understand your content. Key schemas:
