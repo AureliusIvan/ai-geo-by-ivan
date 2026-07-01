@@ -1,6 +1,6 @@
 {
   "name": "ai-geo-by-ivan",
-  "description": "GEO / AI-search optimization toolkit by Aurelius Ivan Wijaya. A fork of Corey Haines's marketing-skills (CRO, copywriting, SEO, AI SEO, paid ads, ad creative, growth) extended with Ivan's own GEO skills: geo-audit (full AI-search audit + client-ready graph report) and index-on-search-engine (register a site/subdomain on Google + Bing).",
+  "description": "GEO / AI-search optimization toolkit by Aurelius Ivan Wijaya. A fork of Corey Haines's marketing-skills (CRO, copywriting, SEO, AI SEO, paid ads, ad creative, growth) extended with Ivan's own GEO skills: geo-audit (full AI-search audit + client-ready graph report), index-on-search-engine (register a site/subdomain on Google + Bing), and infinite-run-ai-seo (backlog-driven, self-expanding, self-pacing AI-SEO improvement loop).",
   "version": "1.0.0",
   "author": {
     "name": "Aurelius Ivan Wijaya",
@@ -8,5 +8,6 @@
   },
   "homepage": "https://aitraining.id",
   "license": "MIT",
-  "skills": "./skills"
+  "skills": "./skills",
+  "commands": "./commands"
 }
